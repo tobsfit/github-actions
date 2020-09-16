@@ -1,3 +1,3 @@
 # github-actions
 
-Playground for GitHub actions and workflows
+Playground for GitHub actions and workflows.
