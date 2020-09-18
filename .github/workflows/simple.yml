@@ -3,10 +3,14 @@ on: [pull_request]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     steps:
-      - name: eccho a string
+      - name: echo a string
         run: echo "Hello World"
+        continue-on-error: true
+        timeout-minutes: 0
       - name: multiline script
+        if: failure()
         run: |
           node -v
           npm -v
