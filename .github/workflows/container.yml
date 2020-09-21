@@ -4,17 +4,17 @@ jobs:
   docker-steps:
     runs-on: ubuntu-latest
     container:
-      image: node:14.11.0-alpine3.10
+      image: node:14.11.0-buster
     steps:
       - name: log node version
         run: node -v
       - name: step with docker
-        uses: docker://node:12.18.4-stretch # statt einer github action rufen wir direkt ein docker image auf
+        uses: docker://node:14.11.0-alpine3.10 # statt einer github action rufen wir direkt ein docker image auf
         with: # mit with übergeben wir die Werte in die Aktion bzw in unserem Fall in den Container
           entrypoint: /bin/echo/ # Pfad zum ausführbaren file - type -a node
           args: Hello world
       - name: log node version
-        uses: docker://node:12.18.4-stretch # statt einer github action rufen wir direkt ein docker image auf
+        uses: docker://node:14.11.0-alpine3.10 # statt einer github action rufen wir direkt ein docker image auf
         with: # mit with übergeben wir die Werte in die Aktion bzw in unserem Fall in den Container
           entrypoint: /usr/local/bin/node # Pfad zum ausführbaren file - type -a node
           args: -v
