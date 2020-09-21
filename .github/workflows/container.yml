@@ -28,7 +28,7 @@ jobs:
         uses: docker://technosophos/slack-notify
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: "Hello Slack"
+          SLACK_MESSAGE: "Hello @Manu, my name is Saibot, how are you today? I got called because there was an commit to GitHub"
   node-docker:
     runs-on: ubuntu-latest
     services:
