@@ -11,8 +11,8 @@ jobs:
       - name: step with docker
         uses: docker://node:12.18.4-stretch # statt einer github action rufen wir direkt ein docker image auf
         with: # mit with übergeben wir die Werte in die Aktion bzw in unserem Fall in den Container
-          entrypoint: '/bin/echo/' # Pfad zum ausführbaren file - type -a node
-          args: 'Hello world'
+          entrypoint: /bin/echo/ # Pfad zum ausführbaren file - type -a node
+          args: Hello world
       - name: log node version
         uses: docker://node:12.18.4-stretch # statt einer github action rufen wir direkt ein docker image auf
         with: # mit with übergeben wir die Werte in die Aktion bzw in unserem Fall in den Container
