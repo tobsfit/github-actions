@@ -4,7 +4,7 @@ jobs:
   docker-steps:
     runs-on: ubuntu-latest
     container:
-      image: node:14.11.0-buster
+      image: node:14-buster
     steps:
       - name: log node version
         run: node -v
